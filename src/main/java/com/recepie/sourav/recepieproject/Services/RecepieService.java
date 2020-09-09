@@ -4,6 +4,9 @@ import com.recepie.sourav.recepieproject.domain.Recepie;
 
 import java.util.Set;
 
+
+
 public interface RecepieService {
     public Set<Recepie> findAll();
+    public Recepie findById(Long id);
 }

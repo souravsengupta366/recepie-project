@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class RecepieProjectApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void contextLoads() {//this is integration testing 
 	}
 
 }
