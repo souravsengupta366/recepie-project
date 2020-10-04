@@ -4,7 +4,9 @@ import com.recepie.sourav.recepieproject.commands.RecepieCommand;
 import com.recepie.sourav.recepieproject.domain.Recepie;
 import lombok.Synchronized;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RecepieCommandToRecepie implements Converter<RecepieCommand, Recepie> {
     private final NoteCommandToNote noteCommandToNote;
     private final IngredientsCommandToIngredients ingredientsCommandToIngredients;

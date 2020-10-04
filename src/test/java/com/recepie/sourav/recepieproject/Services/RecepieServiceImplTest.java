@@ -1,5 +1,7 @@
 package com.recepie.sourav.recepieproject.Services;
 
+import com.recepie.sourav.recepieproject.converter.RecepieCommandToRecepie;
+import com.recepie.sourav.recepieproject.converter.RecepieToRecepieCommand;
 import com.recepie.sourav.recepieproject.domain.Recepie;
 import com.recepie.sourav.recepieproject.repositories.RecepieRepository;
 import org.junit.Before;
@@ -21,12 +23,16 @@ class RecepieServiceImplTest {
 
     @Mock
     RecepieRepository recepieRepository;
+    @Mock
+    RecepieToRecepieCommand recepieToRecepieCommand;
+    @Mock
+    RecepieCommandToRecepie recepieCommandToRecepie;
     RecepieService recepieService;
 
     @Before
     void before(){
         MockitoAnnotations.initMocks(this);
-        recepieService = new RecepieServiceImpl(recepieRepository);
+        recepieService = new RecepieServiceImpl(recepieRepository, recepieToRecepieCommand, recepieCommandToRecepie);
     }
     @Test
     void findById() {

@@ -23,6 +23,7 @@ public class IngredientsToIngredientsCommand implements Converter<Ingredients, I
         ingredientsCommand.setAmount(source.getAmount());
         ingredientsCommand.setDescription(source.getDescription());
         ingredientsCommand.setUnitOfMeasure(unitOfMeasureToUnitOfMeasureCommand.convert(source.getUnitOfMeasure()));
+        ingredientsCommand.setRecepieId(source.getRecipe().getId());
         return ingredientsCommand;
     }
 }

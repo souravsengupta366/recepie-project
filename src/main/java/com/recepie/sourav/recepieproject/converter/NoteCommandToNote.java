@@ -4,7 +4,9 @@ import com.recepie.sourav.recepieproject.commands.NoteCommand;
 import com.recepie.sourav.recepieproject.domain.Note;
 import lombok.Synchronized;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
 
+@Component
 public class NoteCommandToNote implements Converter<NoteCommand, Note> {
 
     @Synchronized
